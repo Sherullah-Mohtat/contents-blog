@@ -5,26 +5,25 @@ comming soon...
 
 🔥 Example for your “First Project” page
 
+.. this bellow first line is call custome css class name
+.. container:: video-responsive  
 
-.. container:: video-responsive
-
-   .. youtube:: dQw4w9WgXcQ
+   .. youtube:: YGwpnSwzq1M
       :width: 100%
       :height: 100%
 
-  
-.. raw:: html
+.. this bellow code is embed html for youtube video for now I commente it
+  .. raw:: html
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe
+        src="https://www.youtube.com/embed/YGwpnSwzq1M"
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+        allowfullscreen>
+      </iframe>
+    </div>
 
-   <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-     <iframe
-       src="https://www.youtube.com/embed/YGwpnSwzq1M"
-       style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
-       allowfullscreen>
-     </iframe>
-   </div>
-
-
-.. image:: images/iphonescr.png
-   :alt: Flutter logo
-   :class: responsive-img
-   :align: center
+.. this bello is image embeded code for now I commente it
+  .. image:: images/iphonescr.png
+    :alt: Flutter logo
+    :class: responsive-img
+    :align: center
