@@ -1,7 +1,19 @@
+.. meta::
+   :description: Full reference documentation for Flutter widgets, MaterialApp.router, GoRouter, Scaffold, Container, Center, and all routing parameters with examples.
+   :keywords: Flutter Reference, MaterialApp.router, GoRouter, Widgets, Flutter Routing, Navigator 2.0, Flutter Documentation, Dart UI
+
 Reference
-=========
+==========
 
 Authoritative, factual details.
+
+
+
+
+
+
+
+
 
 .. toctree::
    :maxdepth: 2
