@@ -1,229 +1,280 @@
-<!doctype html>
-<html class="no-js" lang="en" data-content_root="../">
-  <head><meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="next" title="MaterialApp.router" href="1_2_materialapp_router.html"><link rel="prev" title="Widget" href="0_widget.html">
-        <link rel="prefetch" href="../_static/logo.jpeg" as="image">
+ 
+<!DOCTYPE html>
 
-    <!-- Generated with Sphinx 8.2.3 and Furo 2025.09.25 -->
-        <title>MaterialApp - Flutter</title>
-      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d111a655" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=580074bf" />
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>MaterialApp &#8212; Flutter</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=873836d9" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/style.css?v=d6ed2d86" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=8dab3a3b" />
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=7e65a07a" />
     <link rel="stylesheet" type="text/css" href="../_static/css/ad_style.css?v=34d129f9" />
-    <link rel="stylesheet" type="text/css" href="../_static/csss/custom_head_foot.css" />
-    
-    
-
-
-<style>
-  body {
-    --color-code-background: #f2f2f2;
-  --color-code-foreground: #1e1e1e;
+    <link rel="stylesheet" type="text/css" href="../_static/css/navbar-scroll.css?v=e4cab7e5" />
   
-  }
-  @media not print {
-    body[data-theme="dark"] {
-      --color-code-background: #202020;
-  --color-code-foreground: #d0d0d0;
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=f9c1cefe"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'reference/1_materialapp';</script>
+    <script src="../_static/js/custom.js?v=6f0278c6"></script>
+    <link rel="icon" href="_static/images/favicon.svg"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="MaterialApp.router" href="1_2_materialapp_router.html" />
+    <link rel="prev" title="Widget" href="0_widget.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
   
-    }
-    @media (prefers-color-scheme: dark) {
-      body:not([data-theme="light"]) {
-        --color-code-background: #202020;
-  --color-code-foreground: #d0d0d0;
   
-      }
-    }
-  }
-</style></head>
-  <body>
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+<!-- Google Tag Manager (noscript) -->
+<noscript
+  ><iframe
+    src="https://www.googletagmanager.com/ns.html?id=GTM-P4GQM59"
+    height="0"
+    width="0"
+    style="display: none; visibility: hidden"
+  ></iframe
+></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<nav class="dask-nav container-fluid">
+  <ul>
+    <li class="logo">
+      <a href="https://docs.dask.org/">
+        <img
+          class="caption"
+          src="../_static/images/dask-horizontal-white.svg"
+        />
+      </a>
+    </li>
+
+    <li>
+      <a href="https://docs.dask.org/">Dask</a>
+    </li>
+
+    <li>
+      <a href="https://distributed.dask.org/">Distributed</a>
+    </li>
+
+    <li>
+      <a href="https://ml.dask.org/">Dask ML</a>
+    </li>
+
+    <li>
+      <a href="https://examples.dask.org/">Examples</a>
+    </li>
+
+    <li>
+      <a href="https://docs.dask.org/en/latest/ecosystem.html">Ecosystem</a>
+    </li>
+
+    <li>
+      <a href="https://docs.dask.org/en/latest/support.html">Community</a>
+    </li>
+  </ul>
+</nav>
+
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+<nav class="dask-nav container-fluid">
+  <ul>
+    <!-- 🔥 FLUTTER = current documentation root -->
+    <li class="">
+      <a href="../index.html">FLUTTER</a>
+    </li>
+
+    <li class="">
+      <a href="../java/index.html">FIREBASE</a>
+    </li>
+
+    <li class="">
+      <a href="../html/index.html">DART</a>
+    </li>
+
+    <li class="">
+      <a href="../css/index.html">DJANGO</a>
+    </li>
+
+    <li class="">
+      <a href="../java/index.html">PYTHON</a>
+    </li>
     
-    <script>
-      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
-    </script>
-    
+    <li class="">
+      <a href="../java/index.html">POSTGRESQL</a>
+    </li>
 
-<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-  <symbol id="svg-toc" viewBox="0 0 24 24">
-    <title>Contents</title>
-    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
-      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
-    </svg>
-  </symbol>
-  <symbol id="svg-menu" viewBox="0 0 24 24">
-    <title>Menu</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
-      <line x1="3" y1="12" x2="21" y2="12"></line>
-      <line x1="3" y1="6" x2="21" y2="6"></line>
-      <line x1="3" y1="18" x2="21" y2="18"></line>
-    </svg>
-  </symbol>
-  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
-    <title>Expand</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
-      <polyline points="9 18 15 12 9 6"></polyline>
-    </svg>
-  </symbol>
-  <symbol id="svg-sun" viewBox="0 0 24 24">
-    <title>Light mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
-      <circle cx="12" cy="12" r="5"></circle>
-      <line x1="12" y1="1" x2="12" y2="3"></line>
-      <line x1="12" y1="21" x2="12" y2="23"></line>
-      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-      <line x1="1" y1="12" x2="3" y2="12"></line>
-      <line x1="21" y1="12" x2="23" y2="12"></line>
-      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-    </svg>
-  </symbol>
-  <symbol id="svg-moon" viewBox="0 0 24 24">
-    <title>Dark mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
-      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
-    </svg>
-  </symbol>
-  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
-    <title>Auto light/dark, in light mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
-      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
-      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
-      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
-      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
-      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
-      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
-      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
-      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
-      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
-      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
-      <circle cx="14.5" cy="9.55" r="3.6"/>
-    </svg>
-  </symbol>
-  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
-    <title>Auto light/dark, in dark mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
-      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
-      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
-      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
-      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
-      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
-      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
-      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
-      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
-      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
-      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
-      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
-    </svg>
-  </symbol>
-  <symbol id="svg-pencil" viewBox="0 0 24 24">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
-      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
-      <path d="M13.5 6.5l4 4" />
-      <path d="M20 21l2 -2l-2 -2" />
-      <path d="M17 17l-2 2l2 2" />
-    </svg>
-  </symbol>
-  <symbol id="svg-eye" viewBox="0 0 24 24">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
-      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
-      <path
-        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
-      <path d="M20 21l2 -2l-2 -2" />
-      <path d="M17 17l-2 2l2 2" />
-    </svg>
-  </symbol>
-</svg>
+    <li class="">
+      <a href="../java/index.html">MONGODB</a>
+    </li>
 
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle site navigation sidebar">
-<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc" aria-label="Toggle table of contents sidebar">
-<label class="overlay sidebar-overlay" for="__navigation"></label>
-<label class="overlay toc-overlay" for="__toc"></label>
+    <li class="">
+      <a href="../java/index.html">GIT</a>
+    </li>
 
-<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+    <li class="">
+      <a href="../java/index.html">GITHUB</a>
+    </li>
+
+    <li class="">
+      <a href="../java/index.html">DOCKER</a>
+    </li>
+
+    <li class="">
+      <a href="../java/index.html">KUBERNETES</a>
+    </li>
+  </ul>
+</nav>
 
 
-
-<div class="page">
-  <header class="mobile-header">
-    <div class="header-left">
-      <label class="nav-overlay-icon" for="__navigation">
-        <span class="icon"><svg><use href="#svg-menu"></use></svg></span>
-      </label>
-    </div>
-    <div class="header-center">
-      <a href="../index.html"><div class="brand">Flutter</div></a>
-    </div>
-    <div class="header-right">
-      <div class="theme-toggle-container theme-toggle-header">
-        <button class="theme-toggle" aria-label="Toggle Light / Dark / Auto color theme">
-          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
-          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
-          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
-          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
-        </button>
-      </div>
-      <label class="toc-overlay-icon toc-header-icon" for="__toc">
-        <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
-      </label>
-    </div>
-  </header>
-  <aside class="sidebar-drawer">
-    <div class="sidebar-container">
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
-  <div class="sidebar-logo-container">
-    <img class="sidebar-logo" src="../_static/logo.jpeg" alt="Logo"/>
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
   </div>
   
-  <span class="sidebar-brand-text">Flutter</span>
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
   
-</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
-  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
-  <input type="hidden" name="check_keywords" value="yes">
-  <input type="hidden" name="area" value="default">
-</form>
-<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  <p class="caption" role="heading"><span class="caption-text">🚀 Get Started</span></p>
-<ul>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../tutorials/index.html">Tutorials</a><input aria-label="Toggle navigation of Tutorials" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+
+<a class="navbar-brand logo" href="_static/images/dask-horizontal-white.svg">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Flutter</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">🚀 Get Started</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../tutorials/index.html">Tutorials</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../tutorials/quickstart.html">Quickstart</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tutorials/first_project.html">First Project</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../guides/index.html">Guides</a><input aria-label="Toggle navigation of Guides" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../guides/index.html">Guides</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../guides/2_installation.html">Installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../guides/configuration.html">Configuration</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">🧠 Explanations</span></p>
-<ul>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../explanation/index.html">Explanations</a><input aria-label="Toggle navigation of Explanations" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">🧠 Explanations</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../explanation/index.html">Explanations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../explanation/architecture.html">Architecture</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../explanation/design-decisions.html">Design Decisions</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">⚙️ Reference</span></p>
-<ul class="current">
-<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Reference</a><input aria-label="Toggle navigation of Reference" checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">⚙️ Reference</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Reference</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="0_widget.html">Widget</a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">MaterialApp</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">MaterialApp</a></li>
 <li class="toctree-l2"><a class="reference internal" href="1_2_materialapp_router.html">MaterialApp.router</a></li>
 <li class="toctree-l2"><a class="reference internal" href="1_3_gorouter.html">GoRouter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="1_4_goroute.html">GoRoute</a></li>
@@ -239,44 +290,164 @@
 <li class="toctree-l2"><a class="reference internal" href="10_customtransitionpage.html">CustomTransitionPage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="callbacks_handlers.html">Callback and Handlers</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 
-</div>
-</div>
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
 
       </div>
       
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
     </div>
-  </aside>
-  <div class="main">
-    <div class="content">
-      <div class="article-container">
-        <a href="#" class="back-to-top muted-link">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
-          </svg>
-          <span>Back to top</span>
-        </a>
-        <div class="content-icon-container">
-          <div class="theme-toggle-container theme-toggle-content">
-            <button class="theme-toggle" aria-label="Toggle Light / Dark / Auto color theme">
-              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
-              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
-              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
-              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
-            </button>
-          </div>
-          <label class="toc-overlay-icon toc-content-icon" for="__toc">
-            <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
-          </label>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>MaterialApp</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#all-named-parameters">All Named Parameters</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#home">✅ 1. home:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#title">✅ 2. title:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#theme">✅ 3. theme:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#routes">✅ 4. routes:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#initialroute">✅ 5. initialRoute:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#debugshowcheckedmodebanner">✅ 6. debugShowCheckedModeBanner:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#locale">✅ 7. locale:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#localizationsdelegates">✅ 8. localizationsDelegates:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#navigatorkey">✅ 9. navigatorKey:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ongenerateroute">✅ 10. onGenerateRoute:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#onunknownroute">✅ 11. onUnknownRoute:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#navigatorobservers">✅ 12. navigatorObservers:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#builder">✅ 13. builder:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thememode">✅ 14. themeMode:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#darktheme">✅ 15. darkTheme:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#color">✅ 16. color:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#highcontrasttheme">✅ 17. highContrastTheme:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#highcontrastdarktheme">✅ 18. highContrastDarkTheme:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#localeresolutioncallback">✅ 19. localeResolutionCallback:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#supportedlocales">✅ 20. supportedLocales:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scrollbehavior">✅ 21. scrollBehavior:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#checkerboardrastercacheimages">✅ 22. checkerboardRasterCacheImages:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#checkerboardoffscreenlayers">✅ 23. checkerboardOffscreenLayers:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#useinheritedmediaquery">✅ 24. useInheritedMediaQuery:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#restorationscopeid">✅ 25. restorationScopeId:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ongeneratetitle">✅ 26. onGenerateTitle:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#actions">✅ 27. actions:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ongenerateinitialroutes">✅ 28. onGenerateInitialRoutes:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shortcuts">✅ 29. shortcuts:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scaffoldmessengerkey">✅ 30. scaffoldMessengerKey:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#showperformanceoverlay">✅ 31. showPerformanceOverlay:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key">✅ 32. key:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#onnavigationnotification">✅ 33. onNavigationNotification:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#debugshowmaterialgrid">✅ 34. debugShowMaterialGrid:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#showsemanticsdebugger">✅ 35. showSemanticsDebugger:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#localelistresolutioncallback">✅ 36. localeListResolutionCallback:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#themeanimationduration">✅ 37. themeAnimationDuration:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#themeanimationcurve">✅ 38. themeAnimationCurve:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#themeanimationstyle">✅ 39. themeAnimationStyle:</a></li>
+</ul>
+            </nav>
         </div>
-        <article role="main" id="furo-main-content">
-          <section id="materialapp">
-<h1>MaterialApp<a class="headerlink" href="#materialapp" title="Link to this heading">¶</a></h1>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="materialapp">
+<h1>MaterialApp<a class="headerlink" href="#materialapp" title="Link to this heading">#</a></h1>
 <p><strong>MaterialApp</strong> is a <strong>core widget</strong> that serves as the <strong>entry point</strong> for most Flutter apps that follow <strong>Material Design</strong> guidelines (Google’s design system).</p>
 <section id="all-named-parameters">
-<h2>All Named Parameters<a class="headerlink" href="#all-named-parameters" title="Link to this heading">¶</a></h2>
+<h2>All Named Parameters<a class="headerlink" href="#all-named-parameters" title="Link to this heading">#</a></h2>
 <p>Named parameters in the latest Flutter MaterialApp as of now.</p>
 <p><strong>MaterialApp(</strong></p>
 <blockquote>
@@ -325,10 +496,10 @@
 <p><strong>);</strong></p>
 </section>
 <section id="examples">
-<h2>Examples<a class="headerlink" href="#examples" title="Link to this heading">¶</a></h2>
+<h2>Examples<a class="headerlink" href="#examples" title="Link to this heading">#</a></h2>
 </section>
 <section id="home">
-<h2>✅ 1. home:<a class="headerlink" href="#home" title="Link to this heading">¶</a></h2>
+<h2>✅ 1. home:<a class="headerlink" href="#home" title="Link to this heading">#</a></h2>
 <p>➡️ The default screen (widget) shown when the app starts. Usually wrapped in a Scaffold to provide structure (app bar, body, etc.).</p>
 <div class="highlight-dart notranslate"><div class="highlight"><pre><span></span><span class="nd">@override</span>
 <span class="n">Widget</span><span class="w"> </span><span class="n">build</span><span class="p">(</span><span class="n">BuildContext</span><span class="w"> </span><span class="n">context</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -350,7 +521,7 @@
 </div>
 </section>
 <section id="title">
-<h2>✅ 2. title:<a class="headerlink" href="#title" title="Link to this heading">¶</a></h2>
+<h2>✅ 2. title:<a class="headerlink" href="#title" title="Link to this heading">#</a></h2>
 <p>➡️ Used by the OS (like Android’s app switcher or iOS VoiceOver) to describe your app. Not shown in the UI.</p>
 <p><strong>✔ title:</strong> is the name of your app.</p>
 <p><strong>It is mainly used by:</strong></p>
@@ -396,7 +567,7 @@ It is not visible to the user on the home screen.</p>
 </div>
 </section>
 <section id="theme">
-<h2>✅ 3. theme:<a class="headerlink" href="#theme" title="Link to this heading">¶</a></h2>
+<h2>✅ 3. theme:<a class="headerlink" href="#theme" title="Link to this heading">#</a></h2>
 <p>➡️ Defines the overall light theme of your app—colors, font, icon themes, etc.</p>
 <p>The theme: parameter controls the entire look &amp; design of your app.</p>
 <div class="highlight-dart notranslate"><div class="highlight"><pre><span></span><span class="nd">@override</span>
@@ -427,7 +598,7 @@ It is not visible to the user on the home screen.</p>
 </div>
 </section>
 <section id="routes">
-<h2>✅ 4. routes:<a class="headerlink" href="#routes" title="Link to this heading">¶</a></h2>
+<h2>✅ 4. routes:<a class="headerlink" href="#routes" title="Link to this heading">#</a></h2>
 <p>➡️ A map of named routes and their widgets. Allows you to navigate using Navigator.pushNamed(context, ‘/about’).</p>
 <ul class="simple">
 <li><p>When someone opens route ’/’ → show HomePage</p></li>
@@ -502,7 +673,7 @@ It is not visible to the user on the home screen.</p>
 </div>
 </section>
 <section id="initialroute">
-<h2>✅ 5. initialRoute:<a class="headerlink" href="#initialroute" title="Link to this heading">¶</a></h2>
+<h2>✅ 5. initialRoute:<a class="headerlink" href="#initialroute" title="Link to this heading">#</a></h2>
 <p>➡️ By default, Flutter starts at route ‘/’.</p>
 <p>But if you set:</p>
 <div class="highlight-dart notranslate"><div class="highlight"><pre><span></span><span class="nl">initialRoute:</span><span class="w"> </span><span class="s1">&#39;/login&#39;</span><span class="p">,</span>
@@ -612,14 +783,14 @@ It is not visible to the user on the home screen.</p>
 </div>
 </section>
 <section id="debugshowcheckedmodebanner">
-<h2>✅ 6. debugShowCheckedModeBanner:<a class="headerlink" href="#debugshowcheckedmodebanner" title="Link to this heading">¶</a></h2>
+<h2>✅ 6. debugShowCheckedModeBanner:<a class="headerlink" href="#debugshowcheckedmodebanner" title="Link to this heading">#</a></h2>
 <p>➡️ Removes the red “DEBUG” banner shown in debug mode.</p>
 <div class="highlight-dart notranslate"><div class="highlight"><pre><span></span><span class="n">MaterialApp</span><span class="p">(</span><span class="nl">debugShowCheckedModeBanner:</span><span class="w"> </span><span class="kc">false</span><span class="p">,);</span>
 </pre></div>
 </div>
 </section>
 <section id="locale">
-<h2>✅ 7. locale:<a class="headerlink" href="#locale" title="Link to this heading">¶</a></h2>
+<h2>✅ 7. locale:<a class="headerlink" href="#locale" title="Link to this heading">#</a></h2>
 <dl class="simple">
 <dt>➡️ Forces the app to use a specific language (e.g., English - United States).</dt><dd><p>locale: tells Flutter which language and region your app should use.</p>
 </dd>
@@ -661,7 +832,7 @@ It is not visible to the user on the home screen.</p>
 </div>
 </section>
 <section id="localizationsdelegates">
-<h2>✅ 8. localizationsDelegates:<a class="headerlink" href="#localizationsdelegates" title="Link to this heading">¶</a></h2>
+<h2>✅ 8. localizationsDelegates:<a class="headerlink" href="#localizationsdelegates" title="Link to this heading">#</a></h2>
 <p>➡️ Provides resources (translations, formats) for specific languages, used for internationalization.</p>
 <div class="highlight-dart notranslate"><div class="highlight"><pre><span></span><span class="n">MaterialApp</span><span class="p">(</span>
 <span class="w">    </span><span class="c1">// 👇 Required for localization support</span>
@@ -675,7 +846,7 @@ It is not visible to the user on the home screen.</p>
 </div>
 </section>
 <section id="navigatorkey">
-<h2>✅ 9. navigatorKey:<a class="headerlink" href="#navigatorkey" title="Link to this heading">¶</a></h2>
+<h2>✅ 9. navigatorKey:<a class="headerlink" href="#navigatorkey" title="Link to this heading">#</a></h2>
 <p>➡️ Lets you control navigation outside of the BuildContext, such as from a service or notification.</p>
 <p>Normally, you navigate like this:</p>
 <div class="highlight-dart notranslate"><div class="highlight"><pre><span></span><span class="n">Navigator</span><span class="p">.</span><span class="n">pushNamed</span><span class="p">(</span><span class="n">context</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;/second&#39;</span><span class="p">);</span>
@@ -775,7 +946,7 @@ It is not visible to the user on the home screen.</p>
 </div>
 </section>
 <section id="ongenerateroute">
-<h2>✅ 10. onGenerateRoute:<a class="headerlink" href="#ongenerateroute" title="Link to this heading">¶</a></h2>
+<h2>✅ 10. onGenerateRoute:<a class="headerlink" href="#ongenerateroute" title="Link to this heading">#</a></h2>
 <p>➡️ Called when a route is not found in routes. You can return a custom screen dynamically.</p>
 <p>onGenerateRoute is used when:</p>
 <blockquote>
@@ -913,7 +1084,7 @@ It is not visible to the user on the home screen.</p>
 </div>
 </section>
 <section id="onunknownroute">
-<h2>✅ 11. onUnknownRoute:<a class="headerlink" href="#onunknownroute" title="Link to this heading">¶</a></h2>
+<h2>✅ 11. onUnknownRoute:<a class="headerlink" href="#onunknownroute" title="Link to this heading">#</a></h2>
 <p><strong>📝 What is onUnknownRoute:?</strong></p>
 <dl class="simple">
 <dt>It is a fallback route handler used when:</dt><dd><ul class="simple">
@@ -1023,7 +1194,7 @@ It is not visible to the user on the home screen.</p>
 </div>
 </section>
 <section id="navigatorobservers">
-<h2>✅ 12. navigatorObservers:<a class="headerlink" href="#navigatorobservers" title="Link to this heading">¶</a></h2>
+<h2>✅ 12. navigatorObservers:<a class="headerlink" href="#navigatorobservers" title="Link to this heading">#</a></h2>
 <p><strong>📝 What is navigatorObservers:?</strong></p>
 <p>navigatorObservers: allows you to watch navigation events.</p>
 <p>You can detect when:</p>
@@ -1153,7 +1324,7 @@ It is not visible to the user on the home screen.</p>
 </div>
 </section>
 <section id="builder">
-<h2>✅ 13. builder:<a class="headerlink" href="#builder" title="Link to this heading">¶</a></h2>
+<h2>✅ 13. builder:<a class="headerlink" href="#builder" title="Link to this heading">#</a></h2>
 <p>➡️ Useful to inject widgets like MediaQuery, Theme, Directionality, or overlays.
 builder: lets you wrap every screen with a widget.</p>
 <p>It is useful for:</p>
@@ -1277,7 +1448,7 @@ builder: lets you wrap every screen with a widget.</p>
 </div>
 </section>
 <section id="thememode">
-<h2>✅ 14. themeMode:<a class="headerlink" href="#thememode" title="Link to this heading">¶</a></h2>
+<h2>✅ 14. themeMode:<a class="headerlink" href="#thememode" title="Link to this heading">#</a></h2>
 <p>➡️ Controls whether to use light theme, dark theme, or follow system setting.</p>
 <p>themeMode: decides <strong>whether your app uses Light Theme, Dark Theme, or System Theme.</strong></p>
 <p><strong>✅ Simple Example Showing themeMode: in MaterialApp</strong></p>
@@ -1404,7 +1575,7 @@ builder: lets you wrap every screen with a widget.</p>
 </dl>
 </section>
 <section id="darktheme">
-<h2>✅ 15. darkTheme:<a class="headerlink" href="#darktheme" title="Link to this heading">¶</a></h2>
+<h2>✅ 15. darkTheme:<a class="headerlink" href="#darktheme" title="Link to this heading">#</a></h2>
 <p>➡️ Defines the theme used when the system is in dark mode and themeMode is set to ThemeMode.system.</p>
 <p><strong>📝 What is darkTheme:?</strong></p>
 <p>darkTheme: defines <strong>how your app looks when dark mode is ON.</strong></p>
@@ -1503,7 +1674,7 @@ builder: lets you wrap every screen with a widget.</p>
 </div>
 </section>
 <section id="color">
-<h2>✅ 16. color:<a class="headerlink" href="#color" title="Link to this heading">¶</a></h2>
+<h2>✅ 16. color:<a class="headerlink" href="#color" title="Link to this heading">#</a></h2>
 <p>➡️ Used on Android for the app preview in the task switcher (background color).</p>
 <p><strong>📝 What does color: do in MaterialApp?</strong></p>
 <p>The color: parameter sets the <strong>primary color</strong> used by:</p>
@@ -1583,7 +1754,7 @@ builder: lets you wrap every screen with a widget.</p>
 </div>
 </section>
 <section id="highcontrasttheme">
-<h2>✅ 17. highContrastTheme:<a class="headerlink" href="#highcontrasttheme" title="Link to this heading">¶</a></h2>
+<h2>✅ 17. highContrastTheme:<a class="headerlink" href="#highcontrasttheme" title="Link to this heading">#</a></h2>
 <p><strong>📝 What is highContrastTheme:?</strong></p>
 <p>It is a special theme that Flutter uses when the system requests <strong>high-contrast UI</strong> for accessibility.</p>
 <dl class="simple">
@@ -1673,12 +1844,11 @@ This is often used by people with low vision.</p>
 </div>
 </section>
 <section id="highcontrastdarktheme">
-<h2>✅ 18. highContrastDarkTheme:<a class="headerlink" href="#highcontrastdarktheme" title="Link to this heading">¶</a></h2>
+<h2>✅ 18. highContrastDarkTheme:<a class="headerlink" href="#highcontrastdarktheme" title="Link to this heading">#</a></h2>
 <p><strong>📝 What is highContrastDarkTheme:?</strong></p>
 <p>It is the <strong>dark version</strong> of the high-contrast theme.</p>
 <p>Used when:</p>
-<div class="table-wrapper docutils container">
-<table class="docutils align-default">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Dark Mode</p></th>
 <th class="head"><p>High Contrast</p></th>
@@ -1802,7 +1972,7 @@ AND
 </div>
 </section>
 <section id="localeresolutioncallback">
-<h2>✅ 19. localeResolutionCallback:<a class="headerlink" href="#localeresolutioncallback" title="Link to this heading">¶</a></h2>
+<h2>✅ 19. localeResolutionCallback:<a class="headerlink" href="#localeresolutioncallback" title="Link to this heading">#</a></h2>
 <p>➡️ You can decide how to choose the right Locale based on device settings and supported locales.</p>
 <p><strong>📝 What does localeResolutionCallback: do?</strong></p>
 <dl class="simple">
@@ -1922,7 +2092,7 @@ AND
 </div>
 </section>
 <section id="supportedlocales">
-<h2>✅ 20. supportedLocales:<a class="headerlink" href="#supportedlocales" title="Link to this heading">¶</a></h2>
+<h2>✅ 20. supportedLocales:<a class="headerlink" href="#supportedlocales" title="Link to this heading">#</a></h2>
 <p>➡️ Lists all the locales your app can work with (for translation, formatting, etc.).</p>
 <p><strong>📝 What does supportedLocales: do?</strong></p>
 <p>It defines the <strong>list of languages your app can display.</strong></p>
@@ -2040,7 +2210,7 @@ You must list them manually.</p>
 </div>
 </section>
 <section id="scrollbehavior">
-<h2>✅ 21. scrollBehavior:<a class="headerlink" href="#scrollbehavior" title="Link to this heading">¶</a></h2>
+<h2>✅ 21. scrollBehavior:<a class="headerlink" href="#scrollbehavior" title="Link to this heading">#</a></h2>
 <p>➡️ Allows customizing how scrolling behaves globally (e.g., removing overscroll glow, customizing drag).</p>
 <p><strong>📝 What does scrollBehavior: do?</strong></p>
 <p>Defines how scrolling works in the entire app:</p>
@@ -2147,7 +2317,7 @@ You must list them manually.</p>
 </div>
 </section>
 <section id="checkerboardrastercacheimages">
-<h2>✅ 22. checkerboardRasterCacheImages:<a class="headerlink" href="#checkerboardrastercacheimages" title="Link to this heading">¶</a></h2>
+<h2>✅ 22. checkerboardRasterCacheImages:<a class="headerlink" href="#checkerboardrastercacheimages" title="Link to this heading">#</a></h2>
 <p>➡️ Shows a checkerboard pattern over images being rasterized (for debug performance analysis).</p>
 <p><strong>📝 What does checkerboardRasterCacheImages do?</strong></p>
 <p>When set to true:</p>
@@ -2237,7 +2407,7 @@ It shows a <strong>checkerboard pattern</strong> over images that Flutter is cac
 </div>
 </section>
 <section id="checkerboardoffscreenlayers">
-<h2>✅ 23. checkerboardOffscreenLayers:<a class="headerlink" href="#checkerboardoffscreenlayers" title="Link to this heading">¶</a></h2>
+<h2>✅ 23. checkerboardOffscreenLayers:<a class="headerlink" href="#checkerboardoffscreenlayers" title="Link to this heading">#</a></h2>
 <p>➡️ Shows a checkerboard over offscreen layers that are cached by Flutter (debug only).</p>
 <p><strong>✅ Simple Example Showing checkerboardOffscreenLayers: in MaterialApp</strong></p>
 <p>checkerboardOffscreenLayers is used <strong>only for debugging performance.</strong>
@@ -2352,7 +2522,7 @@ It highlights (with a checkerboard pattern) any <strong>offscreen layers</strong
 </div>
 </section>
 <section id="useinheritedmediaquery">
-<h2>✅ 24. useInheritedMediaQuery:<a class="headerlink" href="#useinheritedmediaquery" title="Link to this heading">¶</a></h2>
+<h2>✅ 24. useInheritedMediaQuery:<a class="headerlink" href="#useinheritedmediaquery" title="Link to this heading">#</a></h2>
 <p>➡️ Forces the app to use inherited MediaQuery from its parent. Useful in embedded apps or portals.</p>
 <p><strong>✅ Simple Example Showing useInheritedMediaQuery: in MaterialApp</strong></p>
 <p>useInheritedMediaQuery: tells Flutter whether the <strong>MediaQuery values</strong>
@@ -2455,7 +2625,7 @@ the parent gives MediaQuery (size, orientation).</p>
 <p>Now the entire app uses <strong>large text</strong>, inherited from parent.</p>
 </section>
 <section id="restorationscopeid">
-<h2>✅ 25. restorationScopeId:<a class="headerlink" href="#restorationscopeid" title="Link to this heading">¶</a></h2>
+<h2>✅ 25. restorationScopeId:<a class="headerlink" href="#restorationscopeid" title="Link to this heading">#</a></h2>
 <p>➡️ Allows saving and restoring UI state even after the app is killed and restarted.</p>
 <p><strong>✅ Simple Example Showing restorationScopeId: in MaterialApp</strong></p>
 <p>restorationScopeId enables <strong>state restoration</strong>, meaning your app can
@@ -2581,7 +2751,7 @@ automatically remember data when closed and restore it when reopened.</p>
 </div></blockquote>
 </section>
 <section id="ongeneratetitle">
-<h2>✅ 26. onGenerateTitle:<a class="headerlink" href="#ongeneratetitle" title="Link to this heading">¶</a></h2>
+<h2>✅ 26. onGenerateTitle:<a class="headerlink" href="#ongeneratetitle" title="Link to this heading">#</a></h2>
 <p>➡️ Instead of setting a static title, you can generate it dynamically (like reading from locale or preferences).</p>
 <p><strong>✅ Simple Example Showing onGenerateTitle: in MaterialApp</strong></p>
 <p>onGenerateTitle: lets you <strong>generate the app title dynamically at runtime</strong></p>
@@ -2665,8 +2835,7 @@ automatically remember data when closed and restore it when reopened.</p>
 </pre></div>
 </div>
 <p><strong>🚀 Summary</strong></p>
-<div class="table-wrapper docutils container">
-<table class="docutils align-default">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Parameter</p></th>
 <th class="head"><p>Type</p></th>
@@ -2687,7 +2856,7 @@ automatically remember data when closed and restore it when reopened.</p>
 </div>
 </section>
 <section id="actions">
-<h2>✅ 27. actions:<a class="headerlink" href="#actions" title="Link to this heading">¶</a></h2>
+<h2>✅ 27. actions:<a class="headerlink" href="#actions" title="Link to this heading">#</a></h2>
 <p>➡️ Maps Intents to Actions for app-wide accessibility, keyboard shortcuts, and command handling.</p>
 <p><strong>✅ Simple Program Explaining actions: in MaterialApp</strong></p>
 <p>actions: allows you to define <strong>global shortcut actions</strong>, often used with shortcuts: for keyboard shortcuts.</p>
@@ -2793,7 +2962,7 @@ automatically remember data when closed and restore it when reopened.</p>
 </div>
 </section>
 <section id="ongenerateinitialroutes">
-<h2>✅ 28. onGenerateInitialRoutes:<a class="headerlink" href="#ongenerateinitialroutes" title="Link to this heading">¶</a></h2>
+<h2>✅ 28. onGenerateInitialRoutes:<a class="headerlink" href="#ongenerateinitialroutes" title="Link to this heading">#</a></h2>
 <p>➡️ Creates the initial navigation stack when the app starts, instead of using just initialRoute.</p>
 <p><strong>✅ Simple Program for onGenerateInitialRoutes: in MaterialApp</strong></p>
 <p>onGenerateInitialRoutes: lets you define <strong>custom initial routes</strong> when the app starts.</p>
@@ -2875,7 +3044,7 @@ automatically remember data when closed and restore it when reopened.</p>
 </div></blockquote>
 </section>
 <section id="shortcuts">
-<h2>✅ 29. shortcuts:<a class="headerlink" href="#shortcuts" title="Link to this heading">¶</a></h2>
+<h2>✅ 29. shortcuts:<a class="headerlink" href="#shortcuts" title="Link to this heading">#</a></h2>
 <p>➡️ Maps keyboard keys (or gestures) to Intents, supporting shortcut features for desktop or web apps.</p>
 <p><strong>✅ Simple Program for shortcuts: in MaterialApp</strong></p>
 <p>shortcuts: maps keyboard keys to <strong>Intents.</strong></p>
@@ -2938,7 +3107,7 @@ automatically remember data when closed and restore it when reopened.</p>
 </dl>
 </section>
 <section id="scaffoldmessengerkey">
-<h2>✅ 30. scaffoldMessengerKey:<a class="headerlink" href="#scaffoldmessengerkey" title="Link to this heading">¶</a></h2>
+<h2>✅ 30. scaffoldMessengerKey:<a class="headerlink" href="#scaffoldmessengerkey" title="Link to this heading">#</a></h2>
 <p><strong>✅ Simple Example Showing scaffoldMessengerKey: in MaterialApp</strong></p>
 <p>scaffoldMessengerKey: allows you to show <strong>SnackBars from anywhere —</strong>
 even <strong>without BuildContext</strong>, even outside widgets (e.g., services, controllers).</p>
@@ -3055,7 +3224,7 @@ even <strong>without BuildContext</strong>, even outside widgets (e.g., services
 </div></blockquote>
 </section>
 <section id="showperformanceoverlay">
-<h2>✅ 31. showPerformanceOverlay:<a class="headerlink" href="#showperformanceoverlay" title="Link to this heading">¶</a></h2>
+<h2>✅ 31. showPerformanceOverlay:<a class="headerlink" href="#showperformanceoverlay" title="Link to this heading">#</a></h2>
 <p><strong>✅ Simple Example Showing showPerformanceOverlay: in MaterialApp</strong></p>
 <p>The <strong>performance overlay</strong> is a built-in Flutter debugging tool.
 It shows <strong>FPS, GPU usage, UI thread performance</strong>, and frame rendering stats.</p>
@@ -3140,7 +3309,7 @@ It shows <strong>FPS, GPU usage, UI thread performance</strong>, and frame rende
 </div>
 </section>
 <section id="key">
-<h2>✅ 32. key:<a class="headerlink" href="#key" title="Link to this heading">¶</a></h2>
+<h2>✅ 32. key:<a class="headerlink" href="#key" title="Link to this heading">#</a></h2>
 <p><strong>✅ Now: Simple program for key: parameter in MaterialApp</strong></p>
 <p>The key: parameter is used to identify this instance of MaterialApp in the widget tree.</p>
 <p>It is useful when:</p>
@@ -3220,7 +3389,7 @@ If you change the key → Flutter <strong>forces a rebuild</strong></p>
 </div></blockquote>
 </section>
 <section id="onnavigationnotification">
-<h2>✅ 33. onNavigationNotification:<a class="headerlink" href="#onnavigationnotification" title="Link to this heading">¶</a></h2>
+<h2>✅ 33. onNavigationNotification:<a class="headerlink" href="#onnavigationnotification" title="Link to this heading">#</a></h2>
 <p><strong>✅ Simple program to describe onNavigationNotification:</strong></p>
 <p>This listens to <strong>navigation events</strong> (page changes).</p>
 <p>It’s like a “listener” for navigation.</p>
@@ -3312,7 +3481,7 @@ If you change the key → Flutter <strong>forces a rebuild</strong></p>
 </div></blockquote>
 </section>
 <section id="debugshowmaterialgrid">
-<h2>✅ 34. debugShowMaterialGrid:<a class="headerlink" href="#debugshowmaterialgrid" title="Link to this heading">¶</a></h2>
+<h2>✅ 34. debugShowMaterialGrid:<a class="headerlink" href="#debugshowmaterialgrid" title="Link to this heading">#</a></h2>
 <p><strong>✅ Simple program for debugShowMaterialGrid: in MaterialApp</strong></p>
 <p>This shows a <strong>material design grid</strong> on top of your app for UI alignment checking (debugging only).</p>
 <div class="highlight-dart notranslate"><div class="highlight"><pre><span></span><span class="k">import</span><span class="w"> </span><span class="s1">&#39;package:flutter/material.dart&#39;</span><span class="p">;</span>
@@ -3348,7 +3517,7 @@ If you change the key → Flutter <strong>forces a rebuild</strong></p>
 </dl>
 </section>
 <section id="showsemanticsdebugger">
-<h2>✅ 35. showSemanticsDebugger:<a class="headerlink" href="#showsemanticsdebugger" title="Link to this heading">¶</a></h2>
+<h2>✅ 35. showSemanticsDebugger:<a class="headerlink" href="#showsemanticsdebugger" title="Link to this heading">#</a></h2>
 <p><strong>🔍 What is showSemanticsDebugger?</strong></p>
 <p>showSemanticsDebugger is used for <strong>accessibility debugging.</strong></p>
 <blockquote>
@@ -3432,7 +3601,7 @@ If you change the key → Flutter <strong>forces a rebuild</strong></p>
 </div>
 </section>
 <section id="localelistresolutioncallback">
-<h2>✅ 36. localeListResolutionCallback:<a class="headerlink" href="#localelistresolutioncallback" title="Link to this heading">¶</a></h2>
+<h2>✅ 36. localeListResolutionCallback:<a class="headerlink" href="#localelistresolutioncallback" title="Link to this heading">#</a></h2>
 <p><strong>🔍 What is localeListResolutionCallback?</strong></p>
 <p>This parameter is used to:</p>
 <p>✅ Detect the <strong>user’s device language(s)</strong></p>
@@ -3470,8 +3639,7 @@ If you change the key → Flutter <strong>forces a rebuild</strong></p>
 </ul>
 </div></blockquote>
 <p><strong>📌 Key Difference</strong></p>
-<div class="table-wrapper docutils container">
-<table class="docutils align-default">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Feature</p></th>
 <th class="head"><p>Purpose</p></th>
@@ -3548,7 +3716,7 @@ If you change the key → Flutter <strong>forces a rebuild</strong></p>
 </div>
 </section>
 <section id="themeanimationduration">
-<h2>✅ 37. themeAnimationDuration:<a class="headerlink" href="#themeanimationduration" title="Link to this heading">¶</a></h2>
+<h2>✅ 37. themeAnimationDuration:<a class="headerlink" href="#themeanimationduration" title="Link to this heading">#</a></h2>
 <p><strong>🔍 What is themeAnimationDuration?</strong></p>
 <p>themeAnimationDuration controls:</p>
 <p><strong>How long the animation takes when switching between themes</strong></p>
@@ -3649,7 +3817,7 @@ If you change the key → Flutter <strong>forces a rebuild</strong></p>
 </div>
 </section>
 <section id="themeanimationcurve">
-<h2>✅ 38. themeAnimationCurve:<a class="headerlink" href="#themeanimationcurve" title="Link to this heading">¶</a></h2>
+<h2>✅ 38. themeAnimationCurve:<a class="headerlink" href="#themeanimationcurve" title="Link to this heading">#</a></h2>
 <p><strong>🔍 What is themeAnimationCurve?</strong></p>
 <p>themeAnimationCurve defines <strong>how the animation behaves over time.</strong></p>
 <p>In simple words:</p>
@@ -3676,8 +3844,7 @@ If you change the key → Flutter <strong>forces a rebuild</strong></p>
 </div>
 <p>Each one gives a <strong>different feel</strong> to the theme change.</p>
 <p><strong>✅ Quick Difference Table</strong></p>
-<div class="table-wrapper docutils container">
-<table class="docutils align-default">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Parameter</p></th>
 <th class="head"><p>Controls</p></th>
@@ -3759,11 +3926,10 @@ If you change the key → Flutter <strong>forces a rebuild</strong></p>
 </div>
 </section>
 <section id="themeanimationstyle">
-<h2>✅ 39. themeAnimationStyle:<a class="headerlink" href="#themeanimationstyle" title="Link to this heading">¶</a></h2>
+<h2>✅ 39. themeAnimationStyle:<a class="headerlink" href="#themeanimationstyle" title="Link to this heading">#</a></h2>
 <p><strong>🔍 What is themeAnimationStyle in simple words?</strong></p>
 <p>It controls <strong>WHAT TYPE of animation</strong> is used when the theme changes.</p>
-<div class="table-wrapper docutils container">
-<table class="docutils align-default">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Value</p></th>
 <th class="head"><p>Meaning</p></th>
@@ -3795,8 +3961,7 @@ If you change the key → Flutter <strong>forces a rebuild</strong></p>
 </pre></div>
 </div>
 <p><strong>✅ Relationship with others</strong></p>
-<div class="table-wrapper docutils container">
-<table class="docutils align-default">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Parameter</p></th>
 <th class="head"><p>Controls</p></th>
@@ -3870,121 +4035,162 @@ If you change the key → Flutter <strong>forces a rebuild</strong></p>
 </section>
 </section>
 
-        </article>
-      </div>
-      <footer>
-        
-        <div class="related-pages">
-          <a class="next-page" href="1_2_materialapp_router.html">
-              <div class="page-info">
-                <div class="context">
-                  <span>Next</span>
-                </div>
-                <div class="title">MaterialApp.router</div>
-              </div>
-              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
-            </a>
-          <a class="prev-page" href="0_widget.html">
-              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
-              <div class="page-info">
-                <div class="context">
-                  <span>Previous</span>
-                </div>
-                
-                <div class="title">Widget</div>
-                
-              </div>
-            </a>
-        </div>
-        <div class="bottom-of-page">
-          <div class="left-details">
-            <div class="copyright">
-                Copyright &#169; 
-            </div>
-            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
-            
-            <a href="https://github.com/pradyunsg/furo">Furo</a>
-            
-          </div>
-          <div class="right-details">
-            
-          </div>
-        </div>
-        
-      </footer>
-    </div>
-    <aside class="toc-drawer">
-      
-      
-      <div class="toc-sticky toc-scroll">
-        <div class="toc-title-container">
-          <span class="toc-title">
-            On this page
-          </span>
-        </div>
-        <div class="toc-tree-container">
-          <div class="toc-tree">
-            <ul>
-<li><a class="reference internal" href="#">MaterialApp</a><ul>
-<li><a class="reference internal" href="#all-named-parameters">All Named Parameters</a></li>
-<li><a class="reference internal" href="#examples">Examples</a></li>
-<li><a class="reference internal" href="#home">✅ 1. home:</a></li>
-<li><a class="reference internal" href="#title">✅ 2. title:</a></li>
-<li><a class="reference internal" href="#theme">✅ 3. theme:</a></li>
-<li><a class="reference internal" href="#routes">✅ 4. routes:</a></li>
-<li><a class="reference internal" href="#initialroute">✅ 5. initialRoute:</a></li>
-<li><a class="reference internal" href="#debugshowcheckedmodebanner">✅ 6. debugShowCheckedModeBanner:</a></li>
-<li><a class="reference internal" href="#locale">✅ 7. locale:</a></li>
-<li><a class="reference internal" href="#localizationsdelegates">✅ 8. localizationsDelegates:</a></li>
-<li><a class="reference internal" href="#navigatorkey">✅ 9. navigatorKey:</a></li>
-<li><a class="reference internal" href="#ongenerateroute">✅ 10. onGenerateRoute:</a></li>
-<li><a class="reference internal" href="#onunknownroute">✅ 11. onUnknownRoute:</a></li>
-<li><a class="reference internal" href="#navigatorobservers">✅ 12. navigatorObservers:</a></li>
-<li><a class="reference internal" href="#builder">✅ 13. builder:</a></li>
-<li><a class="reference internal" href="#thememode">✅ 14. themeMode:</a></li>
-<li><a class="reference internal" href="#darktheme">✅ 15. darkTheme:</a></li>
-<li><a class="reference internal" href="#color">✅ 16. color:</a></li>
-<li><a class="reference internal" href="#highcontrasttheme">✅ 17. highContrastTheme:</a></li>
-<li><a class="reference internal" href="#highcontrastdarktheme">✅ 18. highContrastDarkTheme:</a></li>
-<li><a class="reference internal" href="#localeresolutioncallback">✅ 19. localeResolutionCallback:</a></li>
-<li><a class="reference internal" href="#supportedlocales">✅ 20. supportedLocales:</a></li>
-<li><a class="reference internal" href="#scrollbehavior">✅ 21. scrollBehavior:</a></li>
-<li><a class="reference internal" href="#checkerboardrastercacheimages">✅ 22. checkerboardRasterCacheImages:</a></li>
-<li><a class="reference internal" href="#checkerboardoffscreenlayers">✅ 23. checkerboardOffscreenLayers:</a></li>
-<li><a class="reference internal" href="#useinheritedmediaquery">✅ 24. useInheritedMediaQuery:</a></li>
-<li><a class="reference internal" href="#restorationscopeid">✅ 25. restorationScopeId:</a></li>
-<li><a class="reference internal" href="#ongeneratetitle">✅ 26. onGenerateTitle:</a></li>
-<li><a class="reference internal" href="#actions">✅ 27. actions:</a></li>
-<li><a class="reference internal" href="#ongenerateinitialroutes">✅ 28. onGenerateInitialRoutes:</a></li>
-<li><a class="reference internal" href="#shortcuts">✅ 29. shortcuts:</a></li>
-<li><a class="reference internal" href="#scaffoldmessengerkey">✅ 30. scaffoldMessengerKey:</a></li>
-<li><a class="reference internal" href="#showperformanceoverlay">✅ 31. showPerformanceOverlay:</a></li>
-<li><a class="reference internal" href="#key">✅ 32. key:</a></li>
-<li><a class="reference internal" href="#onnavigationnotification">✅ 33. onNavigationNotification:</a></li>
-<li><a class="reference internal" href="#debugshowmaterialgrid">✅ 34. debugShowMaterialGrid:</a></li>
-<li><a class="reference internal" href="#showsemanticsdebugger">✅ 35. showSemanticsDebugger:</a></li>
-<li><a class="reference internal" href="#localelistresolutioncallback">✅ 36. localeListResolutionCallback:</a></li>
-<li><a class="reference internal" href="#themeanimationduration">✅ 37. themeAnimationDuration:</a></li>
-<li><a class="reference internal" href="#themeanimationcurve">✅ 38. themeAnimationCurve:</a></li>
-<li><a class="reference internal" href="#themeanimationstyle">✅ 39. themeAnimationStyle:</a></li>
-</ul>
-</li>
-</ul>
 
-          </div>
-        </div>
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="0_widget.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Widget</p>
       </div>
-      
-      
-    </aside>
+    </a>
+    <a class="right-next"
+       href="1_2_materialapp_router.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">MaterialApp.router</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
   </div>
-</div><script src="../_static/documentation_options.js?v=8d563738"></script>
-    <script src="../_static/doctools.js?v=9bcbadda"></script>
-    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/scripts/furo.js?v=46bd48cc"></script>
-    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/js/custom.js"></script>
-    <script src="../_static/jss/custom_header_nav.js"></script>
-    </body>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#all-named-parameters">All Named Parameters</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#home">✅ 1. home:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#title">✅ 2. title:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#theme">✅ 3. theme:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#routes">✅ 4. routes:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#initialroute">✅ 5. initialRoute:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#debugshowcheckedmodebanner">✅ 6. debugShowCheckedModeBanner:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#locale">✅ 7. locale:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#localizationsdelegates">✅ 8. localizationsDelegates:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#navigatorkey">✅ 9. navigatorKey:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ongenerateroute">✅ 10. onGenerateRoute:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#onunknownroute">✅ 11. onUnknownRoute:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#navigatorobservers">✅ 12. navigatorObservers:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#builder">✅ 13. builder:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thememode">✅ 14. themeMode:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#darktheme">✅ 15. darkTheme:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#color">✅ 16. color:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#highcontrasttheme">✅ 17. highContrastTheme:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#highcontrastdarktheme">✅ 18. highContrastDarkTheme:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#localeresolutioncallback">✅ 19. localeResolutionCallback:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#supportedlocales">✅ 20. supportedLocales:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scrollbehavior">✅ 21. scrollBehavior:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#checkerboardrastercacheimages">✅ 22. checkerboardRasterCacheImages:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#checkerboardoffscreenlayers">✅ 23. checkerboardOffscreenLayers:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#useinheritedmediaquery">✅ 24. useInheritedMediaQuery:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#restorationscopeid">✅ 25. restorationScopeId:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ongeneratetitle">✅ 26. onGenerateTitle:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#actions">✅ 27. actions:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ongenerateinitialroutes">✅ 28. onGenerateInitialRoutes:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shortcuts">✅ 29. shortcuts:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scaffoldmessengerkey">✅ 30. scaffoldMessengerKey:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#showperformanceoverlay">✅ 31. showPerformanceOverlay:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key">✅ 32. key:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#onnavigationnotification">✅ 33. onNavigationNotification:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#debugshowmaterialgrid">✅ 34. debugShowMaterialGrid:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#showsemanticsdebugger">✅ 35. showSemanticsDebugger:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#localelistresolutioncallback">✅ 36. localeListResolutionCallback:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#themeanimationduration">✅ 37. themeAnimationDuration:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#themeanimationcurve">✅ 38. themeAnimationCurve:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#themeanimationstyle">✅ 39. themeAnimationStyle:</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Sherullah Mohtat
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+<!-- Google Tag Manager -->
+<script>
+  (function (w, d, s, l, i) {
+    w[l] = w[l] || [];
+    w[l].push({
+      "gtm.start": new Date().getTime(),
+      event: "gtm.js",
+    });
+    var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s),
+      dl = l != "dataLayer" ? "&l=" + l : "";
+    j.async = true;
+    j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+    f.parentNode.insertBefore(j, f);
+  })(
+    window,
+    document,
+    "script",
+    "dataLayer",
+    "GTM-P4GQM59"
+  );
+</script>
+<!-- End Google Tag Manager -->
+
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
 </html>
