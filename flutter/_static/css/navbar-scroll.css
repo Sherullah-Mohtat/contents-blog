@@ -15,7 +15,7 @@
   list-style: none;
   margin: 0 !important;
   padding: 0 12px !important;
-  gap: 18px;
+  gap: 4px;
 
   width: 100%;
 }
@@ -45,11 +45,6 @@
   margin: 0 !important;
   padding: 0 !important;
 }
-/* Optional: fine-tune spacing between items */
-.dask-nav > ul {
-  gap: 10px !important;  /* adjust to taste: 10–16px */
-}
-
 
 /* Tighten the menu container */
 .dask-nav > ul {
@@ -73,9 +68,9 @@
 .bd-header-primary,
 .header-primary,
 .dask-nav {
-  height: 50px !important;         /* change to 48px or 60px if you want */
-  min-height: 50px !important;
-  line-height: 50px !important;
+  height: 20px !important;         /* change to 48px or 60px if you want */
+  min-height: 20px !important;
+  line-height: 20px !important;
 }
 
 /* Ensure the nav content is vertically centered */
@@ -89,7 +84,7 @@
 .dask-nav > ul > li > a {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
-  height: 50px !important;
+  height: 20px !important;
   display: inline-flex !important;
   align-items: center !important;
 }
@@ -104,11 +99,11 @@
   align-items: center !important;
   justify-content: center !important;
 
-  height: 50px;                 /* must match nav height */
+  height: 20px;                 /* must match nav height */
   padding: 0 0 !important;
 
   text-decoration: none !important;
-  font-weight: 50;
+  font-weight: 20;
   color: #ffffff !important;
 
   transition: 
@@ -125,71 +120,49 @@
 
 /* Hover effect: invert colors */
 .dask-nav > ul > li > a:hover {
-  background-color: #373434 !important;
+  background-color: #494949 !important;
   color: #ffffff !important;
-  border-radius: 6px;
+  border-radius: 25px;
 }
 
 /* Active / current page (optional) */
 .dask-nav > ul > li.active > a,
 .dask-nav > ul > li > a[aria-current="page"] {
-  background-color: rgba(255, 255, 255, 0.15);
-  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 25px;
 }
-
-/* ================================
-   FINAL horizontal scroll indicators
-   ================================ */
 
 /* Nav must allow overlay content */
 .dask-nav {
   overflow: visible !important;
 }
 
-/* Give space so arrows never overlap text */
-.dask-nav > ul {
-  padding-left: 36px !important;
-  padding-right: 36px !important;
-}
+/*********************************************/
 
-/* Left + Right arrows */
-.dask-nav::before,
-.dask-nav::after {
+/* arrow buttons */
+.scroll-btn {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 9999;
+  top: 30%;
+  transform: translateY(-50%, -50%);
+  z-index: 1000;
 
+  width: 34px;
+  height: 34px;
+
+  /*background: transparent;*/
+  background-color: #292929;
+  border: none;
+  color: white;
   font-size: 20px;
-  font-weight: 700;
-  line-height: 1;
-
-  color: #3d3d3d;
-  background: rgba(0, 0, 0, 0.6);
-  border-radius: 999px;
-
-  width: 24px;
-  height: 1px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  pointer-events: none; /* never block scrolling */
-  opacity: 0.9;
+  cursor: pointer;
+  padding: 0 10px;
+  user-select: none;
 }
 
-/* Left arrow */
-.dask-nav::before {
-  content: "‹";
-  left: 6px;
-}
+.scroll-left { left: 0px; }
+.scroll-right { right: 0px; }
 
-/* Right arrow */
-.dask-nav::after {
-  content: "›";
-  right: 6px;
-}
+/*********************************************/
 
 /* Slight hover emphasis */
 .dask-nav:hover::before,
@@ -204,3 +177,11 @@
     display: none !important;
   }
 }
+
+/****** Home Icon*******/
+.nav-icon img {
+  height: 20px;
+  width: 20px;
+  filter: brightness(0) invert(1);  /* 🔥 makes black → white */
+}
+
