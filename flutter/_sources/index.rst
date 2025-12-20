@@ -6,10 +6,6 @@
 Flutter
 =========
 
-------------
-Definition
-------------
-
 Flutter is one of the world’s most popular frameworks for building beautiful, fast, and modern applications. If you want to create apps for **Android, iOS, Web, Windows, macOS,** and **Linux** — all from a **single codebase** — Flutter is the perfect choice.
 
 
@@ -29,7 +25,6 @@ Flutter is one of the world’s most popular frameworks for building beautiful, 
 
 ==================================================================================================================================
 
-------------------
 What Is Flutter?
 ------------------
 
@@ -39,7 +34,6 @@ It allows developers to build **high-performance, natively compiled applications
 Unlike other frameworks that rely on native UI components, Flutter **draws everything on the screen itself** using its own rendering engine.
 This is why Flutter apps look clean, smooth, and consistent across every device.
 
-------------------------
 Why Flutter Is Popular
 ------------------------
 
@@ -69,7 +63,6 @@ Why Flutter Is Popular
 
 ============================================================================================================================================
 
----------------------------------
 What You Can Build With Flutter
 ---------------------------------
 
@@ -89,7 +82,6 @@ Flutter is extremely flexible. You can build:
 
 Many big companies use Flutter: Google, BMW, Alibaba, eBay, and many startups.
 
---------------------------------
 Prerequisites to Learn Flutter
 --------------------------------
 
@@ -133,7 +125,6 @@ Understanding simple UI concepts helps:
 
 But don’t worry — Flutter teaches you everything step by step.
 
--------------------------------------
 How Flutter Works (In Simple Words)
 -------------------------------------
 
@@ -169,7 +160,6 @@ Flutter draws UI directly on the device using Skia Engine → this gives:
 
 	•	Cross-platform consistency
 
------------------------------
 What Makes Flutter Special?
 -----------------------------
 
@@ -209,7 +199,6 @@ You can build Android, iOS, and Web apps quickly — saving time and money.
 
 Even if you’re new to programming, Flutter is one of the easiest ways to build real apps.
 
-------------------------------
 Why You Should Learn Flutter
 ------------------------------
 
@@ -221,7 +210,6 @@ Why You Should Learn Flutter
 
 	•	Flutter is the future of **multi-platform development.**
 
------------
 Conclusion
 -----------
 

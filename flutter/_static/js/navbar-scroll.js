@@ -23,3 +23,14 @@ document.addEventListener("DOMContentLoaded", () => {
   updateButtons();
 });
 
+///To Remove tooltips from "Toggle primary sidebar", "Fullscreen mode", "light/dark".////
+// Remove tooltips (title="...") from the white header bar icons
+document.addEventListener("DOMContentLoaded", () => {
+  const root = document.querySelector(".bd-header-article");
+  if (!root) return;
+
+  // Remove ALL title tooltips from that white bar
+  root.querySelectorAll("[title]").forEach((el) => {
+    el.removeAttribute("title");
+  });
+});
