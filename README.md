@@ -1,2 +1,2 @@
-# contents-blog
-Static HTML blog contents, guides, tutorials, and documentation for my main website sherullah-mohtat.github.io.
+# flutter-contents
+Static HTML flutter contents, guides, tutorials, and documentation for my main website sherullah.com
